@@ -1,6 +1,6 @@
 <?php
 
-namespace denis909\storage;
+namespace denis909\storage\models;
 
 use Yii;
 use yii\behaviors\TimestampBehavior;

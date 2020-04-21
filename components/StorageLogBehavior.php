@@ -2,12 +2,12 @@
 
 namespace denis909\storage\components;
 
-use common\models\Uploaded;
-use League\Flysystem\File;
-use trntv\filekit\Storage;
 use Yii;
 use yii\base\Behavior;
 use yii\base\InvalidConfigException;
+use denis909\storage\models\Storage as StorageModel;
+use denis909\storage\components\Storage;
+use League\Flysystem\File;
 
 /**
  * Class FileStorageLogBehavior
@@ -34,7 +34,7 @@ class StorageLogBehavior extends Behavior
     {
         $file = new File($event->filesystem, $event->path);
         
-        $model = new Uploaded;
+        $model = new StorageModel;
 
         if (Yii::$app->has('user'))
         {
@@ -76,7 +76,7 @@ class StorageLogBehavior extends Behavior
      */
     public function afterDelete($event)
     {
-        Uploaded::deleteAll([
+        StorageModel::deleteAll([
             'component' => $this->component,
             'path' => $event->path
         ]);

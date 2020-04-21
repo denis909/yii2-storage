@@ -3,7 +3,7 @@
 return [
     'components' => [
         'storage' => [
-            'class' => denis909\storage\Storage::class,
+            'class' => denis909\storage\components\Storage::class,
             'baseUrl' => '/uploaded',
             'filesystem' => [
                 'class' => denis909\storage\components\StorageFlysystemBuilder::class,
