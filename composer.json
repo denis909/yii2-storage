@@ -1,0 +1,19 @@
+{
+    "name": "denis909/yii2-storage",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "denis909",
+            "email": "mail@denis909.spb.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "denis909\\yii\\" : ""
+        }
+    },
+    "require": {
+        "yii2-starter-kit/yii2-file-kit": "*"
+    }
+}
