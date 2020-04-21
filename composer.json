@@ -10,10 +10,11 @@
     ],
     "autoload": {
         "psr-4": {
-            "denis909\\yii\\" : ""
+            "denis909\\storage\\" : ""
         }
     },
     "require": {
-        "yii2-starter-kit/yii2-file-kit": "*"
+        "yii2-starter-kit/yii2-file-kit": "*",
+        "denis909/cascade-filesystem": "*"
     }
 }
