@@ -4,7 +4,6 @@ namespace denis909\storage\models;
 
 use Yii;
 use yii\behaviors\TimestampBehavior;
-use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "{{%storage}}".
@@ -19,8 +18,9 @@ use yii\db\ActiveRecord;
  * @property string $upload_ip
  * @property integer $created_at
  */
-class Storage extends ActiveRecord
+class Storage extends \yii\db\ActiveRecord
 {
+
     /**
      * @inheritdoc
      */
@@ -29,6 +29,9 @@ class Storage extends ActiveRecord
         return '{{%storage}}';
     }
 
+    /**
+     * @inheritdoc
+     */
     public function behaviors()
     {
         return [
@@ -71,4 +74,5 @@ class Storage extends ActiveRecord
             'created_at' => Yii::t('storage', 'Created At')
         ];
     }
+
 }
