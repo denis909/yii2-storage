@@ -14,24 +14,21 @@ class StorageUploadBehavior extends \trntv\filekit\behaviors\UploadBehavior
     {
         $attribute = ArrayHelper::getValue($this->fields(), 'path');
 
-        if ($attribute)
-        {
-            StorageModel::deleteAll([
-                'component' => $this->filesStorage,
-                'path' => $this->owner->{$attribute}
-            ]);
-        }
+        StorageModel::deleteAll([
+            'component' => $this->filesStorage,
+            'path' => $this->owner->{$attribute}
+        ]);        
     }
 
     protected function deleteMultipleLog()
     {
-        foreach($this->fields() as $field)
-        {
-            $attribute = ArrayHelper::getValue($field, 'path');
+        $attribute = ArrayHelper::getValue($this->fields(), 'path');
 
+        foreach($this->owner->{$this->uploadRelation} as $related)
+        {
             StorageModel::deleteAll([
                 'component' => $this->filesStorage,
-                'path' => $this->owner->{$attribute}
+                'path' => $related->{$attribute}
             ]);
         }
     }
