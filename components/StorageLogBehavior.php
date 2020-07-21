@@ -36,7 +36,7 @@ class StorageLogBehavior extends Behavior
         
         $model = new StorageModel;
 
-        if (Yii::$app->has('user'))
+        if (Yii::$app->has('user') && Yii::$app->has('session'))
         {
             $model->user_id = Yii::$app->user->id;
         }
