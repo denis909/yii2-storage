@@ -1,6 +1,6 @@
 <?php
 
-use Denis909\CascadeFilesystem\CascadeConfig;
+use denis909\yii\CascadeConfig;
 
 Yii::setAlias('@denis909/storage', dirname(__DIR__));
 

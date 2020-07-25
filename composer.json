@@ -5,7 +5,7 @@
     "authors": [
         {
             "name": "denis909",
-            "email": "mail@denis909.spb.ru"
+            "email": "dev@denis909.spb.ru"
         }
     ],
     "autoload": {
@@ -15,6 +15,6 @@
     },
     "require": {
         "yii2-starter-kit/yii2-file-kit": "*",
-        "denis909/cascade-filesystem": "*"
+        "denis909/yii2-cascade-config": "*"
     }
 }
