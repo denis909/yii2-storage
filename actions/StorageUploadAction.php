@@ -1,6 +1,6 @@
 <?php
 
-namespace denis909\storage\components;
+namespace denis909\storage\actions;
 
 class StorageUploadAction extends \trntv\filekit\actions\UploadAction
 {
