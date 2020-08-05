@@ -1,6 +1,6 @@
 <?php
 
-namespace denis909\storage\components;
+namespace denis909\storage;
 
 use yii\helpers\ArrayHelper;
 use denis909\storage\models\Storage as StorageModel;

@@ -1,6 +1,6 @@
 <?php
 
-namespace denis909\storage\components;
+namespace denis909\storage;
 
 use Yii;
 use League\Flysystem\Adapter\Local;
