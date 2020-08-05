@@ -6,7 +6,7 @@ use Yii;
 use yii\base\Behavior;
 use yii\base\InvalidConfigException;
 use denis909\storage\models\Storage as StorageModel;
-use denis909\storage\components\Storage;
+use denis909\storage\Storage;
 use League\Flysystem\File;
 
 /**
