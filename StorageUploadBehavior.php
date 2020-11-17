@@ -10,6 +10,20 @@ class StorageUploadBehavior extends \trntv\filekit\behaviors\UploadBehavior
 
     public $filesStorage = 'storage';
 
+    public function setPathAttribute(?string $name)
+    {
+        $this->owner->{$this->pathAttribute} = $name;
+
+        if ($this->multiple)
+        {
+            $this->afterFindMultiple();
+        }
+        else
+        {
+            $this->afterFindSingle();
+        }
+    }
+
     protected function deleteSingleLog()
     {
         $attribute = ArrayHelper::getValue($this->fields(), 'path');
